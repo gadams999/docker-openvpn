@@ -397,6 +397,8 @@ if [ ${#OVPN_EXTRA_SERVER_CONFIG[@]} -gt 0 ]; then
   cat $TMP_EXTRA_CONFIGFILE >> "$conf"
 fi
 
+# touch the /etc/openvpn/vars file to allow easyrsa to work
+touch ${OPENVPN:-}/vars
 set +e
 
 # Clean-up duplicate configs
