@@ -1,9 +1,10 @@
 # Original credit: https://github.com/jpetazzo/dockvpn
+# and also: https://github.com/kylemanna/docker-openvpn
 
 # Smallest base image
 FROM alpine:latest
 
-LABEL maintainer="Kyle Manna <kyle@kylemanna.com>"
+LABEL maintainer="Gavin Adams <me@gavinadams.org>"
 
 # Testing: pamtester
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
