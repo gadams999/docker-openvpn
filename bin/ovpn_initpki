@@ -20,15 +20,15 @@ while getopts "ns:" opt; do
     case $opt in
         n)
             NO_PASS="nopass"
+            echo "no password set on CA (not recommended!)"
             ;;
         s)
             SUB_ALT="--subject-alt-name=$OPTARG"
-            echo -e "subject alernate name set to:\n"
+            echo "subject alernate name set to:"
             echo $SUB_ALT
             ;;
     esac
 done
-
 
 # Provides a sufficient warning before erasing pre-existing files
 easyrsa init-pki
